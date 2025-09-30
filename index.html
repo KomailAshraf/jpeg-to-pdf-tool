@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPEG to PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JPEG to PDF Converter</h1>
+            <p class="subtitle">Convert your JPEG images to PDF documents with advanced options</p>
+        </header>
+
+        <div class="instructions">
+            <h2>How to Use This Tool:</h2>
+            <ol>
+                <li>Upload JPEG images using the "Browse Files" button or by dragging and dropping</li>
+                <li>Adjust conversion options like page size, orientation, and quality</li>
+                <li>Preview your images and remove any if needed</li>
+                <li>Click "Convert to PDF" to generate your PDF document</li>
+                <li>Preview the PDF and download using the "Download PDF" button</li>
+            </ol>
+        </div>
+
+        <div class="app-container">
+            <div class="upload-section">
+                <h2 class="section-title">Upload Images</h2>
+                
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p>Drag & Drop your JPEG images here</p>
+                    <p>or</p>
+                    <button class="btn" id="browseBtn">Browse Files</button>
+                    <input type="file" id="fileInput" accept=".jpg,.jpeg" multiple class="hidden">
+                </div>
+
+                <div class="image-list" id="imageList">
+                    <div class="preview-placeholder">No images uploaded yet</div>
+                </div>
+
+                <div class="options-section">
+                    <h2 class="section-title">Conversion Options</h2>
+                    
+                    <div class="option-group">
+                        <label for="pageSize">Page Size</label>
+                        <select id="pageSize">
+                            <option value="a4">A4</option>
+                            <option value="letter">Letter</option>
+                            <option value="legal">Legal</option>
+                            <option value="a3">A3</option>
+                            <option value="a5">A5</option>
+                        </select>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label for="pageOrientation">Page Orientation</label>
+                        <select id="pageOrientation">
+                            <option value="portrait">Portrait</option>
+                            <option value="landscape">Landscape</option>
+                        </select>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label for="imageQuality">Image Quality</label>
+                        <select id="imageQuality">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label for="marginSize">Margin Size (mm)</label>
+                        <input type="number" id="marginSize" min="0" max="50" value="10">
+                    </div>
+                    
+                    <div class="option-group">
+                        <label>
+                            <input type="checkbox" id="fitToPage" checked>
+                            Fit images to page
+                        </label>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label>
+                            <input type="checkbox" id="addPageNumbers">
+                            Add page numbers
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h2 class="section-title">Preview & Convert</h2>
+                
+                <div class="preview-tabs">
+                    <button class="tab-btn active" data-tab="image-preview">Image Preview</button>
+                    <button class="tab-btn" data-tab="pdf-preview">PDF Preview</button>
+                </div>
+                
+                <div class="preview-container active" id="imagePreviewContainer">
+                    <div class="preview-placeholder">
+                        <p>Select an image to preview</p>
+                    </div>
+                </div>
+                
+                <div class="preview-container hidden" id="pdfPreviewContainer">
+                    <div class="preview-placeholder">
+                        <p>Convert to PDF to see preview</p>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-accent btn-block" id="convertBtn" disabled>Convert to PDF</button>
+                    <button class="btn btn-success btn-block" id="downloadBtn" disabled>Download PDF</button>
+                </div>
+                
+                <div class="options-section">
+                    <h2 class="section-title">PDF Options</h2>
+                    
+                    <div class="option-group">
+                        <label for="pdfTitle">PDF Title</label>
+                        <input type="text" id="pdfTitle" placeholder="Enter PDF title">
+                    </div>
+                    
+                    <div class="option-group">
+                        <label for="pdfAuthor">Author</label>
+                        <input type="text" id="pdfAuthor" placeholder="Enter author name">
+                    </div>
+                    
+                    <div class="option-group">
+                        <label for="pdfSubject">Subject</label>
+                        <input type="text" id="pdfSubject" placeholder="Enter subject">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>JPEG to PDF Converter Tool - All processing happens in your browser. Your files are never uploaded to any server.</p>
+            <p>Made with HTML, CSS, and JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Include pdf.js for PDF rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
