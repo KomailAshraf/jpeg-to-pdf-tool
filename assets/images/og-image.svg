@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4a6fa5"/>
+            <stop offset="100%" stop-color="#2c5282"/>
+        </linearGradient>
+    </defs>
+    
+    <rect width="1200" height="630" fill="url(#bgGrad)"/>
+    
+    <circle cx="200" cy="150" r="80" fill="white" opacity="0.1"/>
+    <circle cx="1000" cy="450" r="120" fill="white" opacity="0.1"/>
+    <rect x="800" y="100" width="200" height="200" fill="white" opacity="0.1" rx="20"/>
+    
+    <rect x="100" y="100" width="400" height="400" fill="white" rx="20" opacity="0.9"/>
+    
+    <rect x="150" y="150" width="120" height="160" fill="#4a6fa5" rx="10"/>
+    <rect x="155" y="155" width="110" height="110" fill="white" rx="5"/>
+    <text x="160" y="185" fill="#4a6fa5" font-family="Arial" font-size="14" font-weight="bold">JPEG</text>
+    
+    <text x="210" y="200" fill="#4a6fa5" font-family="Arial" font-size="20">→</text>
+    
+    <rect x="280" y="150" width="120" height="160" fill="#ff6b6b" rx="10"/>
+    <rect x="285" y="155" width="110" height="110" fill="white" rx="5"/>
+    <text x="300" y="185" fill="#ff6b6b" font-family="Arial" font-size="14" font-weight="bold">PDF</text>
+    
+    <text x="600" y="280" text-anchor="middle" fill="white" font-family="Arial" font-size="48" font-weight="bold">JPEG to PDF Converter</text>
+    
+    <text x="600" y="340" text-anchor="middle" fill="white" font-family="Arial" font-size="28">Free Online Tool - 100% Secure</text>
+    
+    <text x="600" y="450" text-anchor="middle" fill="white" font-family="Arial" font-size="20">🔒 No File Uploads • ⚡ Fast Conversion • 🆓 Completely Free</text>
+</svg>
